@@ -14,7 +14,7 @@
       <ul class="nav nav-tabs">
         <li><%= link_to "Inicio", root_path %></li>
         <% if usuario_signed_in? %>
-          <li><%= link_to "Editar Perfil", edit_usuario_path(current_usuario) %></li>
+          <li><%= link_to "Editar Perfil", edit_usuario_registration_path(current_usuario) %></li>
           <li><%= link_to "Cerrar sesión", destroy_usuario_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Acceder", new_usuario_session_path %></li>

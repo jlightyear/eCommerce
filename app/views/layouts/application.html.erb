@@ -7,8 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice" style="<%= "display:none;" if notice.nil? %>"><%= notice %></p>
-  <p class="alert" style="<%= "display:none;" if alert.nil? %>"><%= alert %></p>
   <header>
     <nav>
       <ul class="nav nav-tabs">
@@ -23,6 +21,10 @@
       </ul>
     </nav>
   </header>
+  <br />
+  <div class="col-md-10 center-block no-float alert alert-success" style="<%= "display:none;" if notice.nil? %>"><%= notice %></div>
+  <div class="col-md-10 center-block no-float alert alert-danger" style="<%= "display:none;" if alert.nil? %>"><%= alert %></div>
+
   <%= yield %>
 
 </body>

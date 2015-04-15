@@ -9,7 +9,13 @@
 <body>
   <p class="notice" style="<%= "display:none;" if notice.nil? %>"><%= notice %></p>
   <p class="alert" style="<%= "display:none;" if alert.nil? %>"><%= alert %></p>
-  
+  <header>
+    <nav>
+      <ul class="nav nav-tabs">
+        <li><%= link_to "Inicio", root_path %></li>
+      </ul>
+    </nav>
+  </header>
   <%= yield %>
 
 </body>

@@ -7,13 +7,16 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = '2d4570d022b4ef6dcfa8fe53bfe6f73dcf7eb48bda024639771e0cdc9dbd6068a91d1817927aadfd53e02eb6fcfa5464443e82e932b403a53618cc3ff920f601'
 
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
+
+  config.omniauth :facebook, "377531802447450", "9f7dd96124add68cf12dbd216408dd30"
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
-  config.omniauth :facebook, "377531802447450", "9f7dd96124add68cf12dbd216408dd30"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'

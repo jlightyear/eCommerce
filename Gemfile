@@ -17,6 +17,8 @@ gem 'devise', '~> 3.4'
 gem 'omniauth'
 #Instalación del conector con facebook
 gem 'omniauth-facebook'
+#Instalación del conector con twitter
+gem 'omniauth-twitter'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'

@@ -11,6 +11,8 @@ Devise.setup do |config|
 
   config.omniauth :facebook, "377531802447450", "9f7dd96124add68cf12dbd216408dd30"
 
+  config.omniauth :twitter, "qPgDAOVCJGrcK8WR1Rfs59apS", "zFXxLRuPryTRG2GA4nj4TOab7BJNkDfsbEDGAlyveZlTvtoJa2"
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class

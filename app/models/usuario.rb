@@ -7,7 +7,7 @@ class Usuario < ActiveRecord::Base
 
   validates :username, presence: true, uniqueness: true,
             length: {in: 5..20, too_short: "Mínimo 5 caracteres", too_long: "Máximo 20 caracteres"},
-            format: {with: /([A-Za-z0-9\-\_]+)/, message: "Username sólo puede contener letras, números y guiones"}
+            format: {with: /([A-Za-z0-9\-\_]+)/, message: "sólo puede contener letras, números y guiones"}
 
   def self.find_or_create_by_omniauth(auth)
     usuario = Usuario.where(provider: auth[:provider], uid: auth[:uid]).first

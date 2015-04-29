@@ -5,6 +5,10 @@ class Usuario < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:facebook, :twitter]
 
+  def email_required?
+    false
+  end
+
   validates :username, presence: true, uniqueness: true,
             length: {in: 5..20, too_short: "Mínimo 5 caracteres", too_long: "Máximo 20 caracteres"},
             format: {with: /([A-Za-z0-9\-\_]+)/, message: "sólo puede contener letras, números y guiones"}

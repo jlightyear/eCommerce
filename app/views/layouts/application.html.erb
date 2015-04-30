@@ -22,8 +22,12 @@
     </nav>
   </header>
   <br />
-  <div class="col-md-10 center-block no-float alert alert-success" style="<%= "display:none;" if notice.nil? %>"><%= notice %></div>
-  <div class="col-md-10 center-block no-float alert alert-danger" style="<%= "display:none;" if alert.nil? %>"><%= alert %></div>
+  <div class="col-md-10 center-block no-float alert alert-success" style="<%= "display:none;" if notice.nil? %>">
+    <%= notice %>
+  </div>
+  <div class="col-md-10 center-block no-float alert alert-danger" style="<%= "display:none;" if alert.nil? %>">
+    <%= alert %>
+  </div>
 
   <%= yield %>
 
